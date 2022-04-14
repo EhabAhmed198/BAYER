@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="16dp"
+    android:layout_margin="3dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#FFFF"
+        >
+<TextView
+    android:id="@+id/productName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:text="Product 1"
+app:layout_constraintBottom_toBottomOf="parent"
+    android:textSize="20sp"
+    android:layout_marginStart="30dp"
+    android:textColor="#000"
+    android:gravity="center"
+    />
+
+
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:id="@+id/number_btn"
+            android:layout_width="141dp"
+            android:layout_height="40dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:textSize="8sp"
+            app:initialNumber="0"
+
+           android:gravity="center"
+            android:layout_marginTop="5dp"
+            app:backGroundColor="?attr/colorPrimary"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

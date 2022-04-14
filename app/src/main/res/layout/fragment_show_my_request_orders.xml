@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ShowMyRequestOrdersFragment"
+    android:layoutDirection="ltr"
+    android:background="#E8E8E7">
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+     android:id="@+id/tttt"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+     app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorprimary"
+        >  </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:id="@+id/rlll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorprimary"
+        app:cardCornerRadius="60dp"
+
+        >
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/colorprimary"
+          android:orientation="vertical"
+          >
+        <EditText
+            android:id="@+id/orderNameSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:padding="16dp"
+            android:hint="Phyarmacy Name"
+            android:textColor="#000"
+            android:gravity="center"
+            android:textColorHint="#9A9999"
+            android:background="@drawable/custom_input_edittext_login"
+            />
+        <Button
+            android:id="@+id/bt_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+
+            android:text="Search"
+            android:background="@drawable/costom_login_button"
+            android:textColor="#FFF"
+            android:theme="@style/button"
+            />
+
+        <TextView
+            android:id="@+id/pharmacy_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:textColor="#FFF"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:text="MY ORDERS"
+
+            />
+
+      </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tttt"
+      app:layout_constraintBottom_toBottomOf="parent"
+      >
+<ProgressBar
+    android:id="@+id/pb"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    />
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/orders"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+
+      />
+  </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

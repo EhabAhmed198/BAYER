@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    tools:context=".ProductsActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.92"
+    >
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:background="@color/colorprimary"
+      >  </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/rlll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorprimary"
+        app:cardCornerRadius="60dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorprimary"
+            >
+
+            <TextView
+             android:id="@+id/pharmacy_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+               android:textColor="#FFF"
+                android:gravity="center"
+                android:textSize="22sp"
+             android:text="Ehab"
+
+                />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/rlll"
+    app:layout_constraintBottom_toTopOf="@id/next"
+    android:layout_marginBottom="10dp"
+    >
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_products"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+</FrameLayout>
+    <Button
+        android:id="@+id/next"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/costom_login_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:text="Confirm"
+        android:textColor="#FFF"
+        android:layout_marginBottom="10dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/navcoor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.08"
+
+    >
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:backgroundTint="@color/colorprimary"
+        app:hideOnScroll="true"
+   android:background="@color/colorprimary"
+
+
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/add1"
+        android:backgroundTint="@color/colorprimary"
+        android:id="@+id/add"
+        app:layout_anchor="@id/bottomAppBar"
+        />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>
